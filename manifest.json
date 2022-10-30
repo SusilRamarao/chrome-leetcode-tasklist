@@ -1,6 +1,6 @@
 {
 
-    "manifest_version" : 3,
+    "manifest_version" : 2,
     "name": "Test",
     "description": "Add custom background",
     "version" : "1.0",
@@ -25,8 +25,7 @@
         {
           "js": ["scripts/content.js"],
           "matches": [
-            "https://developer.chrome.com/docs/extensions/*",
-            "https://developer.chrome.com/docs/webstore/*"
+            "https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/*"
           ]
         }
       ]
