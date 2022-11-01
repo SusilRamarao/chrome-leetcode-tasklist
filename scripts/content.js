@@ -29,7 +29,42 @@ for(var i = 0; i < arr.length; i++){
 }
 
 
-var leetcodeURL = "https://leetcode.com/api/problems/algorithms/";
+var leetcodeURL = "https://leetcode.com/";
+//var x = document.cookie;
+/*
+fetch(leetcodeURL).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  console.log(data);
+}).catch(function() {
+  console.log("Booo");
+});
+*/
+
+const opts = {
+  method: 'GET',
+  credentials: 'include',
+  headers: {
+      cookie: 'LEETCODE_SESSION:'
+  }
+};
+
+fetch(leetcodeURL, opts)
+.then(res => res.json())
+.then(out =>
+  console.debug('Checkout this JSON! ', out))
+.catch(err => { 
+  console.debug("Ola ");
+  console.debug(err); });
+
+/*
+for(var i = 0; i < x.length; i++){
+
+  console.debug(x[i]);
+}*/
+
+
+var leetcodeProblemURL = "https://leetcode.com/api/problems/algorithms/";
 /*
 var temp;
 fetch(leetcodeURL)
@@ -69,7 +104,7 @@ function(err, data) {
 
 */
 
-
+/*
 let data = {
     query: "\n query userProblemsSolved($username: String!) {\n allQuestionsCount {\n difficulty\n count\n } \n matchedUser(username: $username) {\n problemsSolvedBeatsStats {\n difficulty\n percentage\n }\n subm itStatsGlobal {\n acSubmissionNum {\n difficulty\n count\n }\n }\n }\n}\n ",
     variables: {
@@ -86,7 +121,7 @@ fetch(leetcodeURL, {
     }).then(out =>
         console.debug('Checkout this JSON! ', out));
 
-
+*/
 
 /*
 var xhr = new XMLHttpRequest();
